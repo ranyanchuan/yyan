@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello yyan</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准yyan.css-->
+		<link rel="stylesheet" href="../css/yyan.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+	</head>
+
+	<body>
+		<header class="yyan-bar yyan-bar-nav">
+		    <a class="yyan-action-back yyan-icon yyan-icon-left-nav yyan-pull-left"></a>
+		    <h1 class="yyan-title">左右滑动分页</h1>
+		</header>
+		<div class="yyan-content">
+		    <div class="yyan-slider">
+		        <div class="yyan-slider-group yyan-slider-loop">
+		        	<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一个图文表格) -->
+		            <div class="yyan-slider-item yyan-slider-item-duplicate">
+		                <ul class="yyan-table-view yyan-grid-view">
+		                    <li class="yyan-table-view-cell yyan-media yyan-col-xs-6"><a href="#"><img class="yyan-media-object" src="../images/cbd.jpg">
+		                            <div class="yyan-media-body">Color of SIP CBD</div></a></li>
+		                    <li class="yyan-table-view-cell yyan-media yyan-col-xs-6"><a href="#"><img class="yyan-media-object" src="../images/yuantiao.jpg">
+		                            <div class="yyan-media-body">静静看这世界</div></a></li>
+		                </ul>
+		            </div>
+		            <div class="yyan-slider-item">
+		                <ul class="yyan-table-view yyan-grid-view">
+		                    <li class="yyan-table-view-cell yyan-media yyan-col-xs-6"><a href="#"><img class="yyan-media-object" src="../images/shuijiao.jpg">
+		                            <div class="yyan-media-body">幸福就是可以一起睡觉</div></a></li>
+		                    <li class="yyan-table-view-cell yyan-media yyan-col-xs-6"><a href="#"><img class="yyan-media-object" src="../images/muwu.jpg">
+		                            <div class="yyan-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+		                </ul>
+		            </div>
+		            <div class="yyan-slider-item">
+		                <ul class="yyan-table-view yyan-grid-view">
+		                    <li class="yyan-table-view-cell yyan-media yyan-col-xs-6"><a href="#"><img class="yyan-media-object" src="../images/cbd.jpg">
+		                            <div class="yyan-media-body">Color of SIP CBD</div></a></li>
+		                    <li class="yyan-table-view-cell yyan-media yyan-col-xs-6"><a href="#"><img class="yyan-media-object" src="../images/yuantiao.jpg">
+		                            <div class="yyan-media-body">静静看这世界</div></a></li>
+		                </ul>
+		            </div>
+		            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一个图文表格) -->
+		            <div class="yyan-slider-item yyan-slider-item-duplicate">
+		                <ul class="yyan-table-view yyan-grid-view">
+		                    <li class="yyan-table-view-cell yyan-media yyan-col-xs-6"><a href="#"><img class="yyan-media-object" src="../images/shuijiao.jpg">
+		                            <div class="yyan-media-body">幸福就是可以一起睡觉</div></a></li>
+		                    <li class="yyan-table-view-cell yyan-media yyan-col-xs-6"><a href="#"><img class="yyan-media-object" src="../images/muwu.jpg">
+		                            <div class="yyan-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+		                </ul>
+		            </div>
+		        </div>
+		        <div class="yyan-slider-indicator" style="position: static;background-color: #fff;">
+		            <span class="yyan-action yyan-action-previous yyan-icon yyan-icon-back"></span>
+		            <div class="yyan-number">
+		                <span>1</span> / 2
+		            </div>
+		            <span class="yyan-action yyan-action-next yyan-icon yyan-icon-forward"></span>
+		        </div>
+		    </div>
+		</div>
+	</body>
+	<script src="../js/yyan.min.js"></script>
+	<script>
+	    yyan.init();
+	</script>
+</html>

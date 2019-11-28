@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello yyan</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准yyan.css-->
+		<link rel="stylesheet" href="../css/yyan.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+	</head>
+
+	<body>
+
+		<header class="yyan-bar yyan-bar-nav">
+		    <a class="yyan-action-back yyan-icon yyan-icon-left-nav yyan-pull-left"></a>
+		    <h1 class="yyan-title">9宫格默认样式</h1>
+		</header>
+		<div class="yyan-content">
+		        <ul class="yyan-table-view yyan-grid-view yyan-grid-9">
+		            <li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3"><a href="#">
+		                    <span class="yyan-icon yyan-icon-home"></span>
+		                    <div class="yyan-media-body">Home</div></a></li>
+		            <li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3"><a href="#">
+		                    <span class="yyan-icon yyan-icon-email"><span class="yyan-badge">5</span></span>
+		                    <div class="yyan-media-body">Email</div></a></li>
+		            <li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3"><a href="#">
+		                    <span class="yyan-icon yyan-icon-chatbubble"></span>
+		                    <div class="yyan-media-body">Chat</div></a></li>
+		            <li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3"><a href="#">
+		                    <span class="yyan-icon yyan-icon-location"></span>
+		                    <div class="yyan-media-body">location</div></a></li>
+		            <li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3"><a href="#">
+		                    <span class="yyan-icon yyan-icon-search"></span>
+		                    <div class="yyan-media-body">Search</div></a></li>
+		            <li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3"><a href="#">
+		                    <span class="yyan-icon yyan-icon-phone"></span>
+		                    <div class="yyan-media-body">Phone</div></a></li>
+		            <li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3"><a href="#">
+		                    <span class="yyan-icon yyan-icon-gear"></span>
+		                    <div class="yyan-media-body">Setting</div></a></li>
+		            <li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3"><a href="#">
+		                    <span class="yyan-icon yyan-icon-info"></span>
+		                    <div class="yyan-media-body">about</div></a></li>
+		           <li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3"><a href="#">
+		                    <span class="yyan-icon yyan-icon-more"></span>
+		                    <div class="yyan-media-body">more</div></a></li>
+		        </ul>
+		</div>
+	</body>
+	<script src="../js/yyan.min.js"></script>
+	<script>
+		yyan.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+	</script>
+</html>

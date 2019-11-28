@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello YYAN</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准yyan.css-->
+		<link rel="stylesheet" href="../css/yyan.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+
+	</head>
+	<body>
+		<header class="yyan-bar yyan-bar-nav">
+			<a class="yyan-action-back yyan-icon yyan-icon-left-nav yyan-pull-left"></a>
+			<h1 class="yyan-title">折叠面板</h1>
+		</header>
+		<div class="yyan-content">
+			<div class="yyan-card">
+				<ul class="yyan-table-view">
+					<li class="yyan-table-view-cell yyan-collapse">
+						<a class="yyan-navigate-right" href="#">表单</a>
+						<div class="yyan-collapse-content">
+							<form class="yyan-input-group">
+								<div class="yyan-input-row">
+									<label>Input</label>
+									<input type="text" placeholder="普通输入框">
+								</div>
+								<div class="yyan-input-row">
+									<label>Input</label>
+									<input type="text" class="yyan-input-clear" placeholder="带清除按钮的输入框">
+								</div>
+
+								<div class="yyan-input-row yyan-plus-visible">
+									<label>Input</label>
+									<input type="text" class="yyan-input-speech yyan-input-clear" placeholder="语音输入">
+								</div>
+								<div class="yyan-button-row">
+									<button class="yyan-btn yyan-btn-primary" type="button" onclick="return false;">确认</button>&nbsp;&nbsp;
+									<button class="yyan-btn yyan-btn-primary" type="button" onclick="return false;">取消</button>
+								</div>
+							</form>
+						</div>
+					</li>
+					<li class="yyan-table-view-cell yyan-collapse">
+						<a class="yyan-navigate-right" href="#">图片轮播</a>
+						<div class="yyan-collapse-content">
+							<div id="slider" class="yyan-slider">
+								<div class="yyan-slider-group yyan-slider-loop">
+									<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+									<div class="yyan-slider-item yyan-slider-item-duplicate">
+										<a href="#">
+											<img src="../images/yuantiao.jpg">
+										</a>
+									</div>
+									<!-- 第一张 -->
+									<div class="yyan-slider-item">
+										<a href="#">
+											<img src="../images/shuijiao.jpg">
+										</a>
+									</div>
+									<!-- 第二张 -->
+									<div class="yyan-slider-item">
+										<a href="#">
+											<img src="../images/muwu.jpg">
+										</a>
+									</div>
+									<!-- 第三张 -->
+									<div class="yyan-slider-item">
+										<a href="#">
+											<img src="../images/cbd.jpg">
+										</a>
+									</div>
+									<!-- 第四张 -->
+									<div class="yyan-slider-item">
+										<a href="#">
+											<img src="../images/yuantiao.jpg">
+										</a>
+									</div>
+									<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+									<div class="yyan-slider-item yyan-slider-item-duplicate">
+										<a href="#">
+											<img src="../images/shuijiao.jpg">
+										</a>
+									</div>
+								</div>
+								<div class="yyan-slider-indicator">
+									<div class="yyan-indicator yyan-active"></div>
+									<div class="yyan-indicator"></div>
+									<div class="yyan-indicator"></div>
+									<div class="yyan-indicator"></div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="yyan-table-view-cell yyan-collapse">
+						<a class="yyan-navigate-right" href="#">文字排版</a>
+						<div class="yyan-collapse-content">
+							<h1>h1. Heading</h1>
+							<h2>h2. Heading</h2>
+							<h3>h3. Heading</h3>
+							<h4>h4. Heading</h4>
+							<h5>h5. Heading</h5>
+							<h6>h6. Heading</h6>
+							<p>
+								p. YYAN目前最接近原生App效果的框架。
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../js/yyan.min.js"></script>
+		<script>
+			yyan.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+		</script>
+	</body>
+
+</html>

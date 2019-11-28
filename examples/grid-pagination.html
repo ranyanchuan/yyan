@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello yyan</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准yyan.css-->
+		<link rel="stylesheet" href="../css/yyan.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
+		<style>
+			.yyan-slider-indicator {
+				bottom: 0;
+			}
+			.yyan-slider {
+				background-color: #f2f2f2;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="yyan-bar yyan-bar-nav">
+			<a class="yyan-action-back yyan-icon yyan-icon-left-nav yyan-pull-left"></a>
+			<h1 class="yyan-title">左右拖动分页9宫</h1>
+		</header>
+		<div class="yyan-content">
+			<ul class="yyan-table-view">
+				<li class="yyan-table-view-cell">
+					循环
+					<div id="Gallery_Toggle" class="yyan-switch">
+						<div class="yyan-switch-handle"></div>
+					</div>
+				</li>
+			</ul>
+			<div id="Gallery" class="yyan-slider" style="margin-top:15px;">
+				<div class="yyan-slider-group">
+					<div class="yyan-slider-item">
+						<ul class="yyan-table-view yyan-grid-view yyan-grid-9">
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-home"></span>
+									<div class="yyan-media-body">Home</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-email"><span class="yyan-badge">5</span></span>
+									<div class="yyan-media-body">Email</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-chatbubble"></span>
+									<div class="yyan-media-body">Chat</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-location"></span>
+									<div class="yyan-media-body">location</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-search"></span>
+									<div class="yyan-media-body">Search</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-phone"></span>
+									<div class="yyan-media-body">Phone</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-gear"></span>
+									<div class="yyan-media-body">Setting</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-info"></span>
+									<div class="yyan-media-body">about</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-more"></span>
+									<div class="yyan-media-body">more</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="yyan-slider-item">
+						<ul class="yyan-table-view yyan-grid-view yyan-grid-9">
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-home"></span>
+									<div class="yyan-media-body">Home</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-email"><span class="yyan-badge">5</span></span>
+									<div class="yyan-media-body">Email</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-chatbubble"></span>
+									<div class="yyan-media-body">Chat</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-location"></span>
+									<div class="yyan-media-body">location</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-search"></span>
+									<div class="yyan-media-body">Search</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-phone"></span>
+									<div class="yyan-media-body">Phone</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-gear"></span>
+									<div class="yyan-media-body">Setting</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-info"></span>
+									<div class="yyan-media-body">about</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-more"></span>
+									<div class="yyan-media-body">more</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="yyan-slider-item">
+						<ul class="yyan-table-view yyan-grid-view yyan-grid-9">
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-home"></span>
+									<div class="yyan-media-body">Home</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-email"><span class="yyan-badge">5</span></span>
+									<div class="yyan-media-body">Email</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-chatbubble"></span>
+									<div class="yyan-media-body">Chat</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-location"></span>
+									<div class="yyan-media-body">location</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-search"></span>
+									<div class="yyan-media-body">Search</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-phone"></span>
+									<div class="yyan-media-body">Phone</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-gear"></span>
+									<div class="yyan-media-body">Setting</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-info"></span>
+									<div class="yyan-media-body">about</div>
+								</a>
+							</li>
+							<li class="yyan-table-view-cell yyan-media yyan-col-xs-4 yyan-col-sm-3">
+								<a href="#">
+									<span class="yyan-icon yyan-icon-more"></span>
+									<div class="yyan-media-body">more</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="yyan-slider-indicator">
+					<div class="yyan-indicator yyan-active"></div>
+					<div class="yyan-indicator"></div>
+					<div class="yyan-indicator"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/yyan.min.js"></script>
+	<script>
+		yyan.init();
+		yyan.ready(function() {
+			var slider = document.getElementById('Gallery');
+			var group = slider.querySelector('.yyan-slider-group');
+			var items = yyan('.yyan-slider-item', group);
+			//克隆第一个节点
+			var first = items[0].cloneNode(true);
+			first.classList.add('yyan-slider-item-duplicate');
+			//克隆最后一个节点
+			var last = items[items.length - 1].cloneNode(true);
+			last.classList.add('yyan-slider-item-duplicate');
+			//处理是否循环逻辑，若支持循环，需支持两点：
+			//1、在.yyan-slider-group节点上增加.yyan-slider-loop类
+			//2、重复增加2个循环节点，图片顺序变为：N、1、2...N、1
+			var sliderApi = yyan(slider).slider();
+
+			function toggleLoop(loop) {
+					if (loop) {
+						group.classList.add('yyan-slider-loop');
+						group.insertBefore(last, group.firstChild);
+						group.appendChild(first);
+						sliderApi.refresh();
+						sliderApi.gotoItem(0);
+					} else {
+						group.classList.remove('yyan-slider-loop');
+						group.removeChild(first);
+						group.removeChild(last);
+						sliderApi.refresh();
+						sliderApi.gotoItem(0);
+					}
+				}
+				//按下“循环”按钮的处理逻辑；
+			document.getElementById('Gallery_Toggle').addEventListener('toggle', function(e) {
+				var loop = e.detail.isActive;
+				toggleLoop(loop);
+			});
+		});
+	</script>
+
+</html>

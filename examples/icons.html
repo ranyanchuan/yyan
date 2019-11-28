@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello yyan</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准yyan.css-->
+		<link rel="stylesheet" href="../css/yyan.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<style>
+			.flex-container {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: row wrap;
+				justify-content: space-between;
+				text-align: center;
+			}
+			.yyan-content-padded {
+				padding: 10px;
+			}
+			.yyan-content-padded a {
+				margin: 3px;
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+				text-align: center;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+			}
+			.yyan-content-padded a .yyan-icon {
+				margin-top: 12px;
+			}
+			.yyan-spinner,
+			.yyan-spinner-white {
+				margin-top: 12px
+			}
+			.active .yyan-spinner-indicator {
+				background: #007AFF;
+			}
+			.yyan-content a {
+				color: #8F8F94;
+			}
+			.yyan-content a.active {
+				color: #007aff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="yyan-bar yyan-bar-nav">
+			<a class="yyan-action-back yyan-icon yyan-icon-left-nav yyan-pull-left"></a>
+			<h1 class="yyan-title">icon（图标）</h1>
+		</header>
+		<div class="yyan-content">
+			<div class="yyan-content-padded">
+				<p style="text-align: center;">点击图标查看高亮样式</p>
+				<div class="flex-container">
+					<a id="icon-icon-contact"><span class="yyan-icon yyan-icon-contact"></span></a>
+					<a id="icon-person"><span class="yyan-icon yyan-icon-person"></span></a>
+					<a id="icon-personadd"><span class="yyan-icon yyan-icon-personadd"></span></a>
+					<a id="icon-phone"><span class="yyan-icon yyan-icon-phone"></span></a>
+					<a id="icon-email"><span class="yyan-icon yyan-icon-email"></span></a>
+					<a id="icon-chatbubble"><span class="yyan-icon yyan-icon-chatbubble"></span></a>
+					<a id="icon-chatboxes"><span class="yyan-icon yyan-icon-chatboxes"></span></a>
+					<a><span class="yyan-icon yyan-icon-weibo"></span></a>
+					<a><span class="yyan-icon yyan-icon-weixin"></span></a>
+					<a><span class="yyan-icon yyan-icon-pengyouquan"></span></a>
+					<a><span class="yyan-icon yyan-icon-chat"></span></a>
+					<a><span class="yyan-icon yyan-icon-qq"></span></a>
+
+					<a><span class="yyan-icon yyan-icon-videocam"></span></a>
+					<a><span class="yyan-icon yyan-icon-camera"></span></a>
+					<a><span class="yyan-icon yyan-icon-image"></span></a>
+					<a id="icon-mic"><span class="yyan-icon yyan-icon-mic"></span></a>
+					<a><span class="yyan-icon yyan-icon-micoff"></span></a>
+					<a id="icon-location"><span class="yyan-icon yyan-icon-location"></span></a>
+					<a><span class="yyan-icon yyan-icon-map"></span></a>
+					<a><span class="yyan-icon yyan-icon-compose"></span></a>
+					<a><span class="yyan-icon yyan-icon-trash"></span></a>
+					<a><span class="yyan-icon yyan-icon-upload"></span></a>
+					<a><span class="yyan-icon yyan-icon-download"></span></a>
+					<a id="icon-close"><span class="yyan-icon yyan-icon-close"></span></a>
+					<a><span class="yyan-icon yyan-icon-closeempty"></span></a>
+					<a><span class="yyan-icon yyan-icon-redo"></span></a>
+					<a><span class="yyan-icon yyan-icon-undo"></span></a>
+					<a id="icon-refresh"><span class="yyan-icon yyan-icon-refresh"></span></a>
+					<a><span class="yyan-icon yyan-icon-refreshempty"></span></a>
+					<a><span class="yyan-icon yyan-icon-reload"></span></a>
+					<a><span class="yyan-icon yyan-icon-loop"></span></a>
+					<!--<a><span class="yyan-icon yyan-icon-loopstrong"></span></a>-->
+					<a>
+						<span class="yyan-spinner"></span>
+					</a>
+					<a id="icon-star"><span class="yyan-icon yyan-icon-star"></span></a>
+					<a><span class="yyan-icon yyan-icon-starhalf"></span></a>
+					<a id="icon-plus"><span class="yyan-icon yyan-icon-plus"></span></a>
+					<a><span class="yyan-icon yyan-icon-plusempty"></span></a>
+					<a id="icon-minus"><span class="yyan-icon yyan-icon-minus"></span></a>
+					<a><span class="yyan-icon yyan-icon-checkmarkempty"></span></a>
+					<a><span class="yyan-icon yyan-icon-search"></span></a>
+					<!--<a><span class="yyan-icon yyan-icon-searchstrong"></span></a>-->
+					<!--<a><span class="yyan-icon yyan-icon-share"></span></a>-->
+
+					<a id="icon-home"><span class="yyan-icon yyan-icon-home"></span></a>
+					<a><span class="yyan-icon yyan-icon-navigate"></span></a>
+					<a id="icon-gear"><span class="yyan-icon yyan-icon-gear"></span></a>
+					<a><span class="yyan-icon yyan-icon-settings"></span></a>
+					<!--<a><span class="yyan-icon yyan-icon-settingsstrong"></span></a>-->
+					<a><span class="yyan-icon yyan-icon-list"></span></a>
+					<a><span class="yyan-icon yyan-icon-bars"></span></a>
+					<a><span class="yyan-icon yyan-icon-paperplane"></span></a>
+					<a id="icon-info"><span class="yyan-icon yyan-icon-info"></span></a>
+					<a id="icon-help"><span class="yyan-icon yyan-icon-help"></span></a>
+					<a><span class="yyan-icon yyan-icon-locked"></span></a>
+					<a id="icon-more"><span class="yyan-icon yyan-icon-more"></span></a>
+					<a><span class="yyan-icon yyan-icon-flag"></span></a>
+					<a><span class="yyan-icon yyan-icon-paperclip"></span></a>
+					<a><span class="yyan-icon yyan-icon-eye"></span></a>
+
+					<a><span class="yyan-icon yyan-icon-back"></span></a>
+					<a><span class="yyan-icon yyan-icon-forward"></span></a>
+
+					<a><span class="yyan-icon yyan-icon-arrowup"></span></a>
+					<a><span class="yyan-icon yyan-icon-arrowdown"></span></a>
+					<a><span class="yyan-icon yyan-icon-arrowleft"></span></a>
+					<a><span class="yyan-icon yyan-icon-arrowright"></span></a>
+
+					<a><span class="yyan-icon yyan-icon-arrowthinup"></span></a>
+					<a><span class="yyan-icon yyan-icon-arrowthindown"></span></a>
+					<a><span class="yyan-icon yyan-icon-arrowthinleft"></span></a>
+					<a><span class="yyan-icon yyan-icon-arrowthinright"></span></a>
+
+					<a><span class="yyan-icon yyan-icon-pulldown"></span></a>
+				</div>
+			</div>
+		</div>
+		<script src="../js/yyan.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			yyan.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			var active = null,
+				lastid, span;
+			yyan(".yyan-content").on("tap", "a", function() {
+				var id = this.getAttribute("id");
+				if (!active) {
+					this.classList.add("active");
+					if (id) {
+						span = this.querySelector("span");
+						span.classList.remove("yyan-" + id);
+						span.classList.add("yyan-" + id + "-filled");
+					}
+					active = this;
+				} else {
+					active.classList.remove("active");
+					if (lastid) {
+						span.classList.remove("yyan-" + lastid + "-filled");
+						span.classList.add("yyan-" + lastid);
+					}
+
+					this.classList.add("active");
+					if (id) {
+						span = this.querySelector("span");
+						span.classList.remove("yyan-" + id);
+						span.classList.add("yyan-" + id + "-filled");
+					}
+
+					active = this;
+				}
+				lastid = id;
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello yyan</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准yyan.css-->
+		<link rel="stylesheet" href="../css/yyan.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+	</head>
+
+	<body>
+		<header class="yyan-bar yyan-bar-nav">
+			<a class="yyan-action-back yyan-icon yyan-icon-left-nav yyan-pull-left"></a>
+			<h1 class="yyan-title">下方悬浮标题</h1>
+		</header>
+		<div class="yyan-content">
+			<ul class="yyan-table-view yyan-table-view-chevron">
+				<li id="switch" class="yyan-table-view-cell">
+					定时轮播
+					<div class="yyan-switch">
+						<div class="yyan-switch-handle"></div>
+					</div>
+				</li>
+			</ul>
+			<div id="slider" class="yyan-slider">
+				<div class="yyan-slider-group yyan-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="yyan-slider-item yyan-slider-item-duplicate">
+						<a href="#">
+							<img src="../images/yuantiao.jpg">
+							<p class="yyan-slider-title">静静看这世界</p>
+						</a>
+					</div>
+					<div class="yyan-slider-item">
+						<a href="#">
+							<img src="../images/shuijiao.jpg">
+							<p class="yyan-slider-title">幸福就是可以一起睡觉</p>
+						</a>
+					</div>
+					<div class="yyan-slider-item">
+						<a href="#">
+							<img src="../images/muwu.jpg">
+							<p class="yyan-slider-title">想要一间这样的木屋，静静的喝咖啡</p>
+						</a>
+					</div>
+					<div class="yyan-slider-item">
+						<a href="#">
+							<img src="../images/cbd.jpg">
+							<p class="yyan-slider-title">Color of SIP CBD</p>
+						</a>
+					</div>
+					<div class="yyan-slider-item">
+						<a href="#">
+							<img src="../images/yuantiao.jpg">
+							<p class="yyan-slider-title">静静看这世界</p>
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="yyan-slider-item yyan-slider-item-duplicate">
+						<a href="#">
+							<img src="../images/shuijiao.jpg">
+							<p class="yyan-slider-title">幸福就是可以一起睡觉</p>
+						</a>
+					</div>
+				</div>
+				<div class="yyan-slider-indicator yyan-text-right">
+					<div class="yyan-indicator yyan-active"></div>
+					<div class="yyan-indicator"></div>
+					<div class="yyan-indicator"></div>
+					<div class="yyan-indicator"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/yyan.min.js"></script>
+	<script>
+		yyan.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		var slider = yyan("#slider");
+		document.getElementById("switch").addEventListener('toggle', function(e) {
+			if (e.detail.isActive) {
+				slider.slider({
+					interval: 5000
+				});
+			} else {
+				slider.slider({
+					interval: 0
+				});
+			}
+		});
+	</script>
+</html>

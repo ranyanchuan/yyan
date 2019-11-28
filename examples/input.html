@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello yyan</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准yyan.css-->
+		<link rel="stylesheet" href="../css/yyan.min.css">
+		<!--App自定义的css-->
+		<!-- <link rel="stylesheet" type="text/css" href="../css/app.css" /> -->
+		<style>
+			h5 {
+				margin: 5px 7px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="yyan-bar yyan-bar-nav">
+			<a class="yyan-action-back yyan-icon yyan-icon-left-nav yyan-pull-left"></a>
+			<h1 class="yyan-title">input（输入框）</h1>
+		</header>
+		<div class="yyan-content">
+			<div class="yyan-content-padded" style="margin: 5px;">
+				<h5>默认搜索框：</h5>
+				<div class="yyan-input-row yyan-search">
+					<input type="search" class="yyan-input-clear" placeholder="">
+				</div>
+				<h5 class="yyan-plus-visible">语音输入搜索框：</h5>
+				<div class="yyan-input-row yyan-search yyan-plus-visible">
+					<input id="search" type="search" class="yyan-input-speech yyan-input-clear" placeholder="带语音输入的搜索框">
+				</div>
+				<h5>密码框：</h5>
+				<div class="yyan-input-row yyan-password">
+					<input type="password" class="yyan-input-password">
+				</div>
+				<form class="yyan-input-group">
+					<div class="yyan-input-row">
+						<label>Input</label>
+						<input type="text" placeholder="普通输入框">
+					</div>
+					<div class="yyan-input-row">
+						<label>Input</label>
+						<input type="text" class="yyan-input-clear" placeholder="带清除按钮的输入框">
+					</div>
+
+					<div class="yyan-input-row yyan-plus-visible">
+						<label>Input</label>
+						<input type="text" class="yyan-input-speech yyan-input-clear" placeholder="语音输入">
+					</div>
+					<div class="yyan-button-row">
+						<button type="button" class="yyan-btn yyan-btn-primary" onclick="return false;">确认</button>&nbsp;&nbsp;
+						<button type="button" class="yyan-btn yyan-btn-danger" onclick="return false;">取消</button>
+					</div>
+				</form>
+				<div class="yyan-input-row" style="margin: 10px 5px;">
+					<textarea id="textarea" rows="5" placeholder="多行文本框"></textarea>
+				</div>
+			</div>
+		</div>
+		<script src="../js/yyan.min.js"></script>
+		<script>
+			yyan.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			 //语音识别完成事件
+			document.getElementById("search").addEventListener('recognized', function(e) {
+				console.log(e.detail.value);
+			});
+
+			var nativeWebview, imm, InputMethodManager;
+			var initNativeObjects = function() {
+				if (yyan.os.android) {
+					var main = plus.android.runtimeMainActivity();
+					var Context = plus.android.importClass("android.content.Context");
+					InputMethodManager = plus.android.importClass("android.view.inputmethod.InputMethodManager");
+					imm = main.getSystemService(Context.INPUT_METHOD_SERVICE);
+				} else {
+					nativeWebview = plus.webview.currentWebview().nativeInstanceObject();
+				}
+			};
+			var showSoftInput = function() {
+				if (yyan.os.android) {
+					imm.toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
+				} else {
+					nativeWebview.plusCallMethod({
+						"setKeyboardDisplayRequiresUserAction": false
+					});
+				}
+				setTimeout(function() {
+					var inputElem = document.querySelector('input');
+					inputElem.focus();
+					inputElem.parentNode.classList.add('yyan-active'); //第一个是search，加上激活样式
+				}, 200);
+			};
+			yyan.plusReady(function() {
+				initNativeObjects();
+				showSoftInput();
+			});
+
+		</script>
+	</body>
+
+</html>
