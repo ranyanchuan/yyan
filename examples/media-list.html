@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello yyan</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准yyan.css-->
+		<link rel="stylesheet" href="../css/yyan.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<style>
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="yyan-bar yyan-bar-nav">
+			<a class="yyan-action-back yyan-icon yyan-icon-left-nav yyan-pull-left"></a>
+			<h1 class="yyan-title">media list（图文列表）</h1>
+		</header>
+		<div class="yyan-content">
+			<!--<ul class="yyan-table-view yyan-unfold">
+				<li class="yyan-table-view-cell yyan-collapse yyan-media yyan-media-icon">
+					<a href="javascript:;">
+						<div class="yyan-media-object yyan-pull-left">
+							<img src="../images/shuijiao.jpg">
+						</div>
+						<div class="yyan-media-body">
+							幸福
+						</div>
+					</a>
+					<ul class="yyan-table-view yyan-table-view-chevron">
+						<li class="yyan-table-view-cell yyan-media yyan-media-icon">
+							<a href="javascript:;">
+								<div class="yyan-media-object yyan-pull-left"><span class="yyan-icon yyan-icon-contact"></span>
+								</div>
+								<div class="yyan-media-body">
+									幸福
+								</div>
+							</a>
+						</li>
+						<li class="yyan-table-view-cell yyan-media yyan-media-icon">
+							<a href="javascript:;">
+								<div class="yyan-media-object yyan-pull-left"><span class="yyan-icon yyan-icon-contact"></span>
+								</div>
+								<div class="yyan-media-body">
+									幸福
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="yyan-table-view-cell yyan-media yyan-media-icon">
+					<a href="javascript:;">
+						<div class="yyan-media-object yyan-pull-left"><span class="yyan-icon yyan-icon-contact"></span>
+						</div>
+						<div class="yyan-media-body">
+							幸福
+						</div>
+					</a>
+				</li>
+				<li class="yyan-table-view-cell yyan-media yyan-media-icon">
+					<a href="javascript:;">
+						<div class="yyan-media-object yyan-pull-left"><span class="yyan-icon yyan-icon-contact"></span>
+						</div>
+						<div class="yyan-media-body">
+							幸福
+						</div>
+					</a>
+				</li>
+			</ul>-->
+			<div class="title">
+				缩略图居左
+			</div>
+			<ul class="yyan-table-view">
+				<li class="yyan-table-view-cell yyan-media">
+					<a href="javascript:;">
+						<img class="yyan-media-object yyan-pull-left" src="../images/shuijiao.jpg">
+						<div class="yyan-media-body">
+							幸福
+							<p class='yyan-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						</div>
+					</a>
+				</li>
+				<li class="yyan-table-view-cell yyan-media">
+					<a href="javascript:;">
+						<img class="yyan-media-object yyan-pull-left" src="../images/muwu.jpg">
+						<div class="yyan-media-body">
+							木屋
+							<p class='yyan-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+						</div>
+					</a>
+				</li>
+				<li class="yyan-table-view-cell yyan-media">
+					<a href="javascript:;">
+						<img class="yyan-media-object yyan-pull-left" src="../images/cbd.jpg">
+						<div class="yyan-media-body">
+							CBD
+							<p class='yyan-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+			<div class="title">
+				缩略图居右
+			</div>
+			<ul class="yyan-table-view">
+				<li class="yyan-table-view-cell yyan-media">
+					<a href="javascript:;">
+						<img class="yyan-media-object yyan-pull-right" src="../images/yuantiao.jpg">
+						<div class="yyan-media-body">
+							远眺
+							<p class='yyan-ellipsis'>静静的看这个世界，最后终于疯了</p>
+						</div>
+					</a>
+				</li>
+				<li class="yyan-table-view-cell yyan-media">
+					<a href="javascript:;">
+						<img class="yyan-media-object yyan-pull-right" src="../images/shuijiao.jpg">
+						<div class="yyan-media-body">
+							幸福
+							<p class='yyan-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						</div>
+					</a>
+				</li>
+				<li class="yyan-table-view-cell yyan-media">
+					<a href="javascript:;">
+						<img class="yyan-media-object yyan-pull-right" src="../images/muwu.jpg">
+						<div class="yyan-media-body">
+							木屋
+							<p class='yyan-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="title">
+				右侧带导航箭头
+			</div>
+			<ul class="yyan-table-view yyan-table-view-chevron">
+				<li class="yyan-table-view-cell yyan-media">
+					<a class="yyan-navigate-right">
+						<img class="yyan-media-object yyan-pull-left" src="../images/cbd.jpg">
+						<div class="yyan-media-body">
+							CBD
+							<p class='yyan-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+						</div>
+					</a>
+				</li>
+				<li class="yyan-table-view-cell yyan-media">
+					<a class='yyan-navigate-right' href="javascript:;">
+						<img class="yyan-media-object yyan-pull-left" src="../images/yuantiao.jpg">
+						<div class="yyan-media-body">
+							远眺
+							<p class='yyan-ellipsis'>静静的看这个世界，最后终于疯了</p>
+						</div>
+					</a>
+				</li>
+				<li class="yyan-table-view-cell yyan-media">
+					<a class="yyan-navigate-right">
+						<img class="yyan-media-object yyan-pull-left" src="../images/shuijiao.jpg">
+						<div class="yyan-media-body">
+							幸福
+							<p class='yyan-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="title">
+				card（圆角列表）
+			</div>
+			<div class="yyan-card" style="margin-bottom: 35px;">
+				<ul class="yyan-table-view">
+					<li class="yyan-table-view-cell yyan-media">
+						<a href="javascript:;">
+							<img class="yyan-media-object yyan-pull-right" src="../images/muwu.jpg">
+							<div class="yyan-media-body">
+								木屋
+								<p class='yyan-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+							</div>
+						</a>
+					</li>
+					<li class="yyan-table-view-cell yyan-media">
+						<a href="javascript:;">
+							<img class="yyan-media-object yyan-pull-right" src="../images/cbd.jpg">
+							<div class="yyan-media-body">
+								CBD
+								<p class='yyan-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+							</div>
+						</a>
+					</li>
+					<li class="yyan-table-view-cell yyan-media">
+						<a href="javascript:;">
+							<img class="yyan-media-object yyan-pull-right" src="../images/yuantiao.jpg">
+							<div class="yyan-media-body">
+								远眺
+								<p class='yyan-ellipsis'>静静的看这个世界，最后终于疯了</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/yyan.min.js"></script>
+	<script>
+		yyan.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+	</script>
+</html>
