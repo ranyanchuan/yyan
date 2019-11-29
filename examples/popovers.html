@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello yyan</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准yyan.css-->
+		<link rel="stylesheet" href="../css/yyan.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
+		<style>
+
+			.yyan-plus .plus{
+				display: inline;
+			}
+
+			.plus{
+				display: none;
+			}
+
+			#topPopover {
+				position: fixed;
+				top: 16px;
+				right: 6px;
+			}
+			#topPopover .yyan-popover-arrow {
+				left: auto;
+				right: 6px;
+			}
+			p {
+				text-indent: 22px;
+			}
+			span.yyan-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			.yyan-popover {
+				height: 300px;
+			}
+			.yyan-content {
+				padding: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="yyan-bar yyan-bar-nav">
+			<a class="yyan-action-back yyan-icon yyan-icon-left-nav yyan-pull-left"></a>
+			<a id="menu" class="yyan-action-menu yyan-icon yyan-icon-bars yyan-pull-right" href="#topPopover"></a>
+			<h1 class="yyan-title">popover（弹出菜单）</h1>
+		</header>
+		<footer class="yyan-bar yyan-bar-footer">
+			<a href="#bottomPopover" class="yyan-btn yyan-btn-link yyan-pull-right">菜单</a>
+		</footer>
+		<div class="yyan-content">
+			<div class="yyan-content-padded">
+				<p>popover（弹出菜单）是mobile App中常见的UI组件，在用户点击位置附近弹出悬浮菜单，向用户展示更多信息或提供快捷操作。</p>
+				<p>popover最常用的两个位置：顶部导航栏右侧和底部工具栏右侧； 点击本页右上角的
+					<span class="yyan-icon yyan-icon-bars"></span> 图标体验，
+					<!--TODO 后续增加原生标题示例-->
+					<!--<span class="plus">这是一个<strong>原生标题栏</strong>触发的popover示例，
+					<span class="yyan-icon yyan-icon-bars"></span>在父webview中，点击后通过自定义事件 通知子webview， 子webview再执行popover的显示隐藏逻辑； </span>-->
+					接着点击本页面右下角的“菜单”按钮体验。
+				</p>
+				<p>除了页面顶部导航栏、底部工具栏固定位置之外，其它区域要使用弹出菜单，都要准确计算物理位置，从而实现弹出菜单的绝对定位； yyan封装的手势事件中，可以获得点击位置，通过这些位置可实现任意区域的弹出菜单显示，点击如下按钮体验：
+				</p>
+				<p style="text-indent: 0;">
+					<a href="#middlePopover" class="yyan-btn yyan-btn-primary yyan-btn-block yyan-btn-outlined" style="padding: 5px 20px;">打开弹出菜单</a>
+				</p>
+			</div>
+		</div>
+		<!--右上角弹出菜单-->
+		<div id="topPopover" class="yyan-popover">
+			<div class="yyan-popover-arrow"></div>
+			<div class="yyan-scroll-wrapper">
+				<div class="yyan-scroll">
+					<ul class="yyan-table-view">
+						<li class="yyan-table-view-cell">
+							<a href="#">Item1</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item2</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item3</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item4</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item5</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item6</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item7</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item8</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item9</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item10</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div id="middlePopover" class="yyan-popover">
+			<div class="yyan-popover-arrow"></div>
+			<div class="yyan-scroll-wrapper">
+				<div class="yyan-scroll">
+					<ul class="yyan-table-view">
+						<li class="yyan-table-view-cell"><a href="#">Item1</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item2</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item3</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item4</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item5</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item6</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item7</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item8</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item9</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item10</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<!--右下角弹出菜单-->
+		<div id="bottomPopover" class="yyan-popover yyan-popover-bottom">
+			<div class="yyan-popover-arrow"></div>
+			<div class="yyan-scroll-wrapper">
+				<div class="yyan-scroll">
+					<ul class="yyan-table-view">
+						<li class="yyan-table-view-cell"><a href="#">Item1</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item2</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item3</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item4</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item5</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item6</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item7</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item8</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item9</a>
+						</li>
+						<li class="yyan-table-view-cell"><a href="#">Item10</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<script src="../js/yyan.min.js"></script>
+		<script>
+			yyan.init();
+
+			yyan.plusReady(function () {
+//				var view = plus.nativeObj.View.getViewById("title");
+//
+//				var bitmap = new plus.nativeObj.Bitmap("back");
+//				bitmap.loadBase64Data("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEUAAAAAev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8AAACubimgAAAAI3RSTlMAGfUTGfQTGPMSGPIYGhgaGBsXGxcbFxwXHBccFhwWHRYdHWufDPQAAAABYktHRACIBR1IAAAAB3RJTUUH4QETEBwooeTlkQAAAJVJREFUSMft1EkSgkAQRNFGUXFWHBDBibr/HTUwD5B/48Ig1y+io7u6MqUhf5hsNEY+j5hMgZ/FJ8Xc9ovos3T96utjbfqN/Nb0O/m96Uv5g+mP8ifTn+Ur01/ka9Nf5RvTt/I309/lH6Z/yr9Mn+Q71/MT8B34K/E58Enzv8R/K98HvnF8p3lr8F7izce7lbf3kJ/lDQp9HdBhgg3PAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE3LTAxLTE5VDE2OjI4OjQwKzA4OjAwpTDFwQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0wMS0xOVQxNjoyODo0MCswODowMNRtfX0AAAAASUVORK5CYII=");
+//				view.drawBitmap(bitmap, {}, {
+//					top: "10px",
+//					left: "10px",
+//					width: "24px",
+//					height: "24px"
+//				});
+//
+//				view.setTouchEventRect({top:"0px",left:"0px",width:"44px",height:"100%"});
+			});
+
+			yyan('.yyan-scroll-wrapper').scroll();
+			yyan('body').on('shown', '.yyan-popover', function(e) {
+				//console.log('shown', e.detail.id);//detail为当前popover元素
+			});
+			yyan('body').on('hidden', '.yyan-popover', function(e) {
+				//console.log('hidden', e.detail.id);//detail为当前popover元素
+			});
+		</script>
+	</body>
+
+</html>
