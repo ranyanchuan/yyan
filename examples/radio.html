@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello yyan</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准yyan.css-->
+		<link rel="stylesheet" href="../css/yyan.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+	</head>
+
+	<body>
+
+		<header class="yyan-bar yyan-bar-nav">
+			<a class="yyan-action-back yyan-icon yyan-icon-left-nav yyan-pull-left"></a>
+			<h1 class="yyan-title">单选框（radio）</h1>
+		</header>
+		<div class="yyan-content">
+			<h5 class="yyan-content-padded">图标左对齐</h5>
+			<div class="yyan-card">
+				<form class="yyan-input-group">
+					<div class="yyan-input-row yyan-radio yyan-left">
+						<label>radio</label>
+						<input name="radio1" type="radio">
+					</div>
+					<div class="yyan-input-row yyan-radio yyan-left">
+						<label>radio</label>
+						<input name="radio1" type="radio" checked>
+					</div>
+					<div class="yyan-input-row yyan-radio yyan-left yyan-disabled">
+						<label>disabled radio</label>
+						<input name="radio1" type="radio" disabled="disabled">
+					</div>
+				</form>
+			</div>
+
+			<h5 class="yyan-content-padded">图标右对齐</h5>
+			<div class="yyan-card">
+				<form class="yyan-input-group">
+					<div class="yyan-input-row yyan-radio">
+						<label>radio</label>
+						<input name="radio1" type="radio">
+					</div>
+					<div class="yyan-input-row yyan-radio">
+						<label>radio</label>
+						<input name="radio1" type="radio" checked>
+					</div>
+					<div class="yyan-input-row yyan-radio yyan-disabled">
+						<label>disabled radio</label>
+						<input name="radio1" type="radio" disabled="disabled">
+					</div>
+				</form>
+			</div>
+			<h5 class="yyan-content-padded">列表模式的单选框</h5>
+			<ul class="yyan-table-view yyan-table-view-radio">
+				<li class="yyan-table-view-cell">
+					<a class="yyan-navigate-right">
+						Item 1
+					</a>
+				</li>
+				<li class="yyan-table-view-cell yyan-selected">
+					<a class="yyan-navigate-right">
+						Item 2
+					</a>
+				</li>
+				<li class="yyan-table-view-cell">
+					<a class="yyan-navigate-right">
+						Item 3
+					</a>
+				</li>
+			</ul>
+			<div class="yyan-content-padded">
+				<p id="info"></p>
+			</div>
+		</div>
+	</body>
+	<script src="../js/yyan.min.js"></script>
+	<script>
+		yyan.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		var info = document.getElementById("info");
+		document.querySelector('.yyan-table-view.yyan-table-view-radio').addEventListener('selected',function(e){
+			info.innerHTML = "当前选中的为："+e.detail.el.innerText;
+		});
+
+	</script>
+</html>

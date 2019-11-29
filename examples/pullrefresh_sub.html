@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello yyan</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/yyan.min.css">
+	</head>
+
+	<body>
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="yyan-content yyan-scroll-wrapper">
+			<div class="yyan-scroll">
+				<!--数据列表-->
+				<ul class="yyan-table-view yyan-table-view-chevron">
+					<li class="yyan-table-view-cell">
+						<a href="" class="yyan-navigate-right">Item 1</a>
+					</li>
+					<li class="yyan-table-view-cell">
+						<a href="" class="yyan-navigate-right">Item 2</a>
+					</li>
+					<li class="yyan-table-view-cell">
+						<a href="" class="yyan-navigate-right">Item 3</a>
+					</li>
+					<li class="yyan-table-view-cell">
+						<a href="" class="yyan-navigate-right">Item 4</a>
+					</li>
+					<li class="yyan-table-view-cell">
+						<a href="" class="yyan-navigate-right">Item 5</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../js/yyan.min.js"></script>
+		<script>
+			yyan.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('.yyan-table-view');
+					var cells = document.body.querySelectorAll('.yyan-table-view-cell');
+					for (var i = cells.length, len = i + 3; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'yyan-table-view-cell';
+						li.innerHTML = '<a class="yyan-navigate-right">Item ' + (i + 1) + '</a>';
+						//下拉刷新，新纪录插到最前面；
+						table.insertBefore(li, table.firstChild);
+					}
+					yyan('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					yyan('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					var table = document.body.querySelector('.yyan-table-view');
+					var cells = document.body.querySelectorAll('.yyan-table-view-cell');
+					for (var i = cells.length, len = i + 5; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'yyan-table-view-cell';
+						li.innerHTML = '<a class="yyan-navigate-right">Item ' + (i + 1) + '</a>';
+						table.appendChild(li);
+					}
+				}, 1500);
+			}
+//			if (yyan.os.plus) {
+//				yyan.plusReady(function() {
+//					setTimeout(function() {
+//						yyan('#pullrefresh').pullRefresh().pullupLoading();
+//					}, 10);
+//
+//				});
+//			} else {
+//				yyan.ready(function() {
+//					yyan('#pullrefresh').pullRefresh().pullupLoading();
+//				});
+//			}
+		</script>
+	</body>
+
+</html>
