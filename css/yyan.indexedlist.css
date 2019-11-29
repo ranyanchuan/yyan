@@ -1,0 +1,112 @@
+.yyan-indexed-list {
+	position: relative;
+	border-top: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	overflow: hidden;
+	background-color: #fafafa;
+	height: 300px;
+	cursor: default;
+}
+.yyan-indexed-list-inner {
+	margin: 0px;
+	padding: 0px;
+	overflow-y: auto;
+	border: none;
+}
+.yyan-indexed-list-inner::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+	visibility: hidden;
+}
+.yyan-indexed-list-empty-alert,
+.yyan-indexed-list-inner.empty ul {
+	display: none;
+}
+.yyan-indexed-list-inner.empty .yyan-indexed-list-empty-alert {
+	display: block;
+}
+.yyan-indexed-list-empty-alert {
+	padding: 30px 15px;
+	text-align: center;
+	color: #ccc;
+	padding-right: 45px;
+}
+.yyan-ios .yyan-indexed-list-inner {
+	width: calc(100% + 10px);
+}
+.yyan-indexed-list-group,
+.yyan-indexed-list-item {
+	padding-right: 45px;
+}
+.yyan-ios .yyan-indexed-list-group,
+.yyan-ios .yyan-indexed-list-item,
+.yyan-ios .yyan-indexed-list-empty-alert {
+	padding-right: 55px;
+}
+.yyan-indexed-list-group {
+	background-color: #f7f7f7;
+}
+.yyan-indexed-list-group {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.yyan-indexed-list-search {
+	border-bottom: solid 1px #e3e3e3;
+	z-index: 15;
+}
+.yyan-indexed-list-search.yyan-search:before {
+	margin-top: -10px;
+}
+.yyan-indexed-list-search input {
+	border-radius: 0px;
+	margin: 0px;
+	background-color: #fafafa;
+}
+.yyan-indexed-list-bar {
+	width: 23px;
+	background-color: lightgrey;
+	position: absolute;
+	height: 100%;
+	z-index: 10;
+	right: 0px;
+	-webkit-transition: .2s;
+}
+.yyan-indexed-list-bar a {
+	display: block;
+	text-align: center;
+	font-size: 11px;
+	padding: 0px;
+	margin: 0px;
+	line-height: 15px;
+	color: #aaa;
+}
+.yyan-indexed-list-bar.active {
+	background-color: rgb(200,200,200);
+}
+.yyan-indexed-list-bar.active a {
+	color: #333;
+}
+.yyan-indexed-list-bar.active a.active {
+	color: #007aff;
+}
+.yyan-indexed-list-alert {
+	position: absolute;
+	z-index: 20;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 80px;
+	height: 80px;
+	left: 50%;
+	top: 50%;
+	margin-left: -40px;
+	margin-top: -40px;
+	border-radius: 40px;
+	text-align: center;
+	line-height: 80px;
+	font-size: 35px;
+	color: #fff;
+	display: none;
+	-webkit-transition: .2s;
+}
+.yyan-indexed-list-alert.active {
+	display: block;
+}
