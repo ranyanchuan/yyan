@@ -1,10 +1,3 @@
-/**
- * 选择列表插件
- * varstion 2.0.0
- * by Houfeng
- * Houfeng@DCloud.io
- */
-
 (function($, window, document, undefined) {
 
 	var MAX_EXCEED = 30;
