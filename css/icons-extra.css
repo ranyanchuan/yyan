@@ -1,0 +1,63 @@
+@font-face {
+    font-family: yyaniconSpread;
+    font-weight: normal;
+    font-style: normal;
+    src:  url('../fonts/yyan-icons-extra.ttf') format('truetype'); /* iOS 4.1- */
+}
+.yyan-icon-extra
+{
+    font-family: yyaniconSpread;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+.yyan-icon-extra-cold:before { content: "\e500"; }
+.yyan-icon-extra-share:before { content: "\e200"; }
+.yyan-icon-extra-class:before { content: "\e118"; }
+.yyan-icon-extra-custom:before { content: "\e117"; }
+.yyan-icon-extra-new:before { content: "\e103"; }
+.yyan-icon-extra-card:before { content: "\e104"; }
+.yyan-icon-extra-grech:before { content: "\e105"; }
+.yyan-icon-extra-trend:before { content: "\e106"; }
+.yyan-icon-extra-filter:before { content: "\e207"; }
+.yyan-icon-extra-holiday:before { content: "\e300"; }
+.yyan-icon-extra-cart:before { content: "\e107"; }
+.yyan-icon-extra-heart:before { content: "\e180"; }
+.yyan-icon-extra-computer:before { content: "\e600"; }
+.yyan-icon-extra-express:before { content: "\e108"; }
+.yyan-icon-extra-gift:before { content: "\e109"; }
+.yyan-icon-extra-gold:before { content: "\e102"; }
+.yyan-icon-extra-lamp:before { content: "\e601"; }
+.yyan-icon-extra-rank:before { content: "\e110"; }
+.yyan-icon-extra-notice:before { content: "\e111"; }
+.yyan-icon-extra-sweep:before { content: "\e202"; }
+.yyan-icon-extra-arrowleftcricle:before { content: "\e401"; }
+.yyan-icon-extra-dictionary:before { content: "\e602"; }
+.yyan-icon-extra-heart-filled:before { content: "\e119"; }
+.yyan-icon-extra-xiaoshuo:before { content: "\e607"; }
+.yyan-icon-extra-top:before { content: "\e403"; }
+.yyan-icon-extra-people:before { content: "\e203"; }
+.yyan-icon-extra-topic:before { content: "\e603"; }
+.yyan-icon-extra-hotel:before { content: "\e301"; }
+.yyan-icon-extra-like:before { content: "\e206"; }
+.yyan-icon-extra-regist:before { content: "\e201"; }
+.yyan-icon-extra-order:before { content: "\e113"; }
+.yyan-icon-extra-alipay:before { content: "\e114"; }
+.yyan-icon-extra-find:before { content: "\e400"; }
+.yyan-icon-extra-arrowrightcricle:before { content: "\e402"; }
+.yyan-icon-extra-calendar:before { content: "\e115"; }
+.yyan-icon-extra-prech:before { content: "\e116"; }
+.yyan-icon-extra-cate:before { content: "\e501"; }
+.yyan-icon-extra-comment:before { content: "\e209"; }
+.yyan-icon-extra-at:before { content: "\e208"; }
+.yyan-icon-extra-addpeople:before { content: "\e204"; }
+.yyan-icon-extra-peoples:before { content: "\e205"; }
+.yyan-icon-extra-calc:before { content: "\e101"; }
+.yyan-icon-extra-classroom:before { content: "\e604"; }
+.yyan-icon-extra-phone:before { content: "\e404"; }
+.yyan-icon-extra-university:before { content: "\e605"; }
+.yyan-icon-extra-outline:before { content: "\e606"; }
